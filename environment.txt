@@ -1,8 +1,8 @@
 ENVIRONMENT REPORT
 ------------------------------------------------------------------------------------
 Run starting time: 
-Run started by Domino user: andrea_lowe
-Domino Environment Name: ResponsibleAI-Environment, Revision: 6, Environment_ID: 652ea7f0994a3b1b9d8abe84
+20:53:30UTCRun started by Domino user: andrea_lowe
+Domino Environment Name: ResponsibleAI-Environment, Revision: 6, Environment_ID     652ea7f0994a3b1b9d8abe84
 Domino Environment image type: Environment
 Domino Environment Dockerfile Instructions:
 
@@ -36,10 +36,10 @@ rm $DOMINO_WORKING_DIR/tmp.txt
 
 ------------------------------------------------------------------------------------
 Platform Info:
-platform :Linux-6.2.0-1017-aws-x86_64-with-glibc2.31
+platform :Linux-6.5.0-1016-aws-x86_64-with-glibc2.31
 system   :Linux
-release  :6.2.0-1017-aws
-version  :#17~22.04.1-Ubuntu SMP Fri Nov 17 21:07:13 UTC 2023
+release  :6.5.0-1016-aws
+version  :#16~22.04.1-Ubuntu SMP Wed Mar 13 18:54:49 UTC 2024
 machine  :x86_64
 processor:x86_64
 
@@ -48,6 +48,9 @@ Python Version :3.9.16
 Compiler       :GCC 11.2.0
 Build          :('main', 'May 15 2023 23:46:34')
 
+Python packages not in environment but installed during session:
+fuzzywuzzy                        1.0.9
+another package                   1.0.8
 Installed Python packages:
 Package                       Version
 ----------------------------- ----------
