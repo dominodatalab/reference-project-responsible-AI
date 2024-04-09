@@ -2,6 +2,16 @@
 
 This template is based on the Defense Innovation Unit's (DIU) Responsible AI Guidelines, which can be found [here](https://www.diu.mil/responsible-ai-guidelines).
 
+Open the environment-tracking/setup.txt file and follow the instructions to add automated environment report creation to your project.
+
+The notebooks can be used to set up a pipeline to programmatically set up Experiments, register a model, set up custom metrics, and track and export your models.
+
+1-model-development.ipynb walks you through training an anomaly detection model, setting up a Domino Experiment, and adding the model to the Registry.
+
+Note, you should remove the above section in your newly created project README file. 
+
+------
+
 # Project Name:
 
 #### Project Goal: 
