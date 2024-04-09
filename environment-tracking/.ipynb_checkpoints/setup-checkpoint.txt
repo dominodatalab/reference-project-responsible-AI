@@ -1,0 +1,12 @@
+To set up automated environment report creation:
+
+1. Navigate to the Domino environment you would like to use. 
+
+2. Click 'Edit Definition' in the top right. Follow the instructions here to edit the pre- and post-run scripts:
+https://docs.dominodatalab.com/en/latest/user_guide/5dd2c1/edit-environment-definition/
+
+3. Copy the contents of env-prerun.sh into the Pre Run Script, and the env-postrun.sh script into the Post Run Script sections of the environment. 
+
+4. Click 'Build' in the bottom right corner.
+
+5. After every code session ends, an environment-report.txt file will be added to the Artifacts or Files page of the project. All versions will be kept. 

@@ -52,7 +52,7 @@ env_image = r_env.json()['environmentRevision']['imageType']
 #write environment report to file
 
 #check if file exists and create if not
-host_file = "environment.txt"
+host_file = "environment-report.txt"
     
 with open(host_file, "w+") as f:
     f.write('ENVIRONMENT REPORT\n')
@@ -61,11 +61,13 @@ with open(host_file, "a+") as file:
     file.write('------------------------------------------------------------------------------------\n')
     file.write('Run starting time: \n')
     file.write(time.strftime("%H:%M:%S%Z", time.localtime()))
+    file.write('\n')
     file.write('Run started by Domino user: {username}\n'.format(username=username))
     file.write('Domino Environment Name: {envname}, Revision: {env_rev}, Environment_ID     {env_id}\n'.format(envname=envname, env_rev=env_rev, env_id=env_id))
     file.write('Domino Environment image type: {env_image}\n'.format(env_image=env_image))
     file.write('Domino Environment Dockerfile Instructions:\n')
     file.write('\n')
+    file.write('------------------------------------------------------------------------------------\n')
     file.write('{env_docker}\n'.format(env_docker=env_docker))
 
     file.write('Pre-run Script:\n') 
