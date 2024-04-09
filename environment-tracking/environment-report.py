@@ -59,24 +59,21 @@ with open(host_file, "w+") as f:
 
 with open(host_file, "a+") as file:
     file.write('------------------------------------------------------------------------------------\n')
-    file.write('Run starting time: \n')
-    file.write(time.strftime("%H:%M:%S%Z", time.localtime()))
-    file.write('\n')
+    file.write('Run starting time: {}\n'.format(time.strftime("%H:%M:%S%Z", time.localtime())))
     file.write('Run started by Domino user: {username}\n'.format(username=username))
     file.write('Domino Environment Name: {envname}, Revision: {env_rev}, Environment_ID     {env_id}\n'.format(envname=envname, env_rev=env_rev, env_id=env_id))
     file.write('Domino Environment image type: {env_image}\n'.format(env_image=env_image))
+    file.write('------------------------------------------------------------------------------------\n')
     file.write('Domino Environment Dockerfile Instructions:\n')
     file.write('\n')
-    file.write('------------------------------------------------------------------------------------\n')
     file.write('{env_docker}\n'.format(env_docker=env_docker))
-
     file.write('Pre-run Script:\n') 
     file.write('{env_prescript}\n'.format(env_prescript=env_prescript))
     file.write('\n')
     file.write('Post-run Script:\n') 
     file.write('{env_postscript}\n'.format(env_postscript=env_postscript)) 
-    file.write('\n')
     file.write('------------------------------------------------------------------------------------\n')
+    file.write('\n')
     file.write('Platform Info:\n')
     file.write('platform :{}\n'.format(platform.platform()))
     file.write('system   :{}\n'.format(platform.system()))
@@ -98,5 +95,4 @@ with open(host_file, "a+") as file:
     file.write('\n')
     file.write('Installed Python packages:\n')
                
-
-subprocess.run("pip list >> environment.txt", shell=True)
+subprocess.run("pip list >> environment-report.txt", shell=True)
